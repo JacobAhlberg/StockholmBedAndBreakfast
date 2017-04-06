@@ -1,0 +1,89 @@
+<ion-view title="Bokning" ng-init="todayDate()">
+  <ion-content padding="true" class="has-header">
+    <h2>{{reservationInformation.room}}</h2>
+    <h4>Pris per natt: {{reservationInformation.price}} SEK</h4>
+
+    <form name="reservationForm" ng-submit="submit()">
+
+        <!--Checkin input which grabs currentday from the todayDate function and disable the days before current day-->
+        <label class="item item-input">
+          <span class="input-label">Incheckning</span>
+          <input  type="date"
+                  name="checkIn"         
+                  ng-model="reservationInformation.checkIn" 
+                  ng-required="true"
+                  min="{{dateToday}}"
+                  >
+        </label>
+
+        <!--CheckOut input which has disabled the days before the checkIn date.-->
+        <label class="item item-input">
+          <span class="input-label">Utcheckning</span>
+          <input  type="date" 
+                  name="checkOut"
+                  ng-model="reservationInformation.checkOut" 
+                  ng-required="true"
+                  min="{{minCheckOut}}"
+                  ng-click="minDayForCheckOut()"
+                  ng-disabled="!reservationForm.checkIn.$valid"
+                  >
+        </label>
+
+        <label class="item item-input" name="adults">
+          <span class="input-label">Antal vuxna: </span>
+          <input  type="number"
+                  name="adults"
+                  ng-model="reservationInformation.adults" 
+                  ng-required="true">
+        </label>
+        
+        <label class="item item-input" name="children">
+          <span class="input-label">Antal barn: </span>
+          <input  type="number"
+                  name="children"
+                  ng-model="reservationInformation.children" 
+                  ng-required="true">
+        </label>
+
+        <br>
+
+        <!--Custom made form-->
+        <div class="myForm">
+            <input  type="text" 
+                        placeholder="Förnamn" 
+                        name="firstName"
+                        ng-model="reservationInformation.firstName" 
+                        ng-required="true">
+                        
+            <input  type="text" 
+                      placeholder="Efternamn"
+                      name="lastName"
+                      ng-model="reservationInformation.lastName" 
+                      ng-required="true">
+
+            <input  type="email" 
+                      name="email" 
+                      placeholder="Email" 
+                      ng-model="reservationInformation.email" 
+                      ng-required="true">
+
+            <input  type="tel" 
+                      placeholder="Telefon" 
+                      ng-model="reservationInformation.phoneNmb" 
+                      ng-required="true">
+
+        </div>
+        
+        <!--The submit button that remains disabled as long as any input from the form is invalid-->
+        <button class="button button-balanced button-block"
+                ui-sref="confirmation" 
+                type="submit"
+                class="button button-balanced  button-block" 
+                ng-click="calcDays(reservationInformation)"
+                ng-disabled="reservationForm.$invalid">
+                Boka rum
+        </button>
+    </form>
+    
+  </ion-content>
+</ion-view>

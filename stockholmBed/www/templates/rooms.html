@@ -1,0 +1,26 @@
+<ion-view title="Rum">
+   <ion-content 
+        padding="true" 
+        class="has-header"
+        >
+    <a 
+        class="list card" 
+        style="display:block;text-decoration:none;" 
+        data-ng-repeat="room in rooms"
+        href="#/rooms/rooms/details/{{room.id}}"
+        >
+
+      <ion-item>{{room.name}}</ion-item>
+      
+      <img style="width:100%;" ng-src="img/{{room.pictures.picture1}}" alt="Rooms">
+
+      <div class="item item-body">
+        <div class="show-list-numbers-and-dots">
+            <strong>{{room.price}} SEK</strong>
+             <p>{{room.details | limitTo : 100}}...
+          </p>
+        </div>
+      </div>
+    </a>
+  </ion-content>
+</ion-view>

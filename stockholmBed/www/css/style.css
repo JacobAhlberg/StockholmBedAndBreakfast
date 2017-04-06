@@ -1,0 +1,37 @@
+#home{
+    background: url(../img/stockholm_background.jpg);
+    background-size:cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home h1, #home h3{
+    color:#FFFFFF;
+    text-align:center;
+ }
+
+#home h3{
+    margin-top: 0px;
+    font-weight: 400;
+}
+
+.myForm input{
+    border: 2px solid #ddd;
+    padding: 25px 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+/*When the inputs are not valid*/
+.myForm input.ng-invalid.ng-touched{
+    border: 2px solid #ED4337;
+}
+
+/*When the inputs are valid*/
+.myForm input.ng-valid{
+    border: 2px solid #32CD32;
+}
+
+/*When the inputs are empty*/
+.myForm input.ng-empty{
+    border: 2px solid #ddd;
+}

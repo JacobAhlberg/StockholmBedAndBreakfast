@@ -1,0 +1,30 @@
+<ion-view title="Information">
+  <ion-content padding="true" class="has-header">
+
+    <ion-list class="list-inset card">
+      <ion-item ng-repeat="room in rooms | filter : {id : whichRoom} " class="item-text-wrap">
+        <ion-slides disable-side-menu-drag="" slider="slider2" delegate-handle="slider2"
+          style="width:100%;height:200px;">
+          <ion-slide-page style="background:url('../img/{{room.pictures.picture1}}') no-repeat center;background-size:cover;"></ion-slide-page>
+          <ion-slide-page style="background:url('../img/{{room.pictures.picture2}}') no-repeat center;background-size:cover;"></ion-slide-page>
+          <ion-slide-page style="background:url('../img/{{room.pictures.picture3}}') no-repeat center;background-size:cover;"></ion-slide-page>
+        </ion-slides>
+        <div class="list card padding">
+          <h2>{{room.name}}</h2>
+          <h3>{{room.price}} SEK</h3><br>
+          <div class="item item-body">
+            <div class="show-list-numbers-and-dots">
+              <p>{{room.details}}</p>
+            </div>
+          </div>
+        </div>
+        <a  ui-sref="tabsController.reservation" 
+            class="button button-balanced  button-block"
+            ng-click="addRoom(room)">
+            Boka rum
+        </a>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

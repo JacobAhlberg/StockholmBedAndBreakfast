@@ -1,0 +1,62 @@
+[
+    {
+        "id" : 1,
+        "name" : "Enkelrum",
+        "type" : "Enkel",
+        "price" : 400,
+        "details" : "Våra bekväma enkelrum är 13-15 kvm, i rummet finns en enkelsäng, arbetsplats och separat fåtölj samt badrum med dusch. Alla enkelrum har strykmöjligheter, tv, hårtork och sminkspegel. ",
+        "pictures" : {
+            "picture1" : "rum1_1.jpg",
+            "picture2" : "rum1_2.jpg",
+            "picture3" : "rum1_3.jpg"
+        }
+    },
+    {
+        "id" : 2,
+        "name" : "Enkelrum",
+        "type" : "Enkel",
+        "price" : 400,
+        "details" : "Våra bekväma enkelrum är 13-15 kvm, i rummet finns en enkelsäng, arbetsplats och separat fåtölj samt badrum med dusch. Alla enkelrum har strykmöjligheter, tv, hårtork och sminkspegel. ",
+        "pictures" : {
+            "picture1" : "rum2_1.jpg",
+            "picture2" : "rum2_2.jpg",
+            "picture3" : "rum2_3.jpg"
+        }
+    },
+    {
+        "id" : 3,
+        "name" : "Dubbelrum",
+        "type" : "Dubbel",
+        "price" : 750,
+        "details" : "Våra rymliga dubbelrum är 17-23 kvm och erbjuder en dubbelsäng eller två enkelsängar. I rummet finns även arbetsplats och separat fåtölj. Alla dubbelrum har strykmöjligheter, tv samt badrum med dusch, hårtork och sminkspegel",
+        "pictures" : {
+            "picture1" : "rum3_1.jpg",
+            "picture2" : "rum3_2.jpg",
+            "picture3" : "rum3_3.jpg"
+        }
+    },
+    {
+        "id" : 4,
+        "name" : "Dubbelrum",
+        "type" : "Dubbel",
+        "price" : 750,
+        "details" : "Våra rymliga dubbelrum är 17-23 kvm och erbjuder en dubbelsäng eller två enkelsängar. I rummet finns även arbetsplats och separat fåtölj. Alla dubbelrum har strykmöjligheter, tv samt badrum med dusch, hårtork och sminkspegel",
+        "pictures" : {
+            "picture1" : "rum4_1.jpg",
+            "picture2" : "rum4_2.jpg",
+            "picture3" : "rum4_3.jpg"
+        }
+    },
+    {
+        "id" : 5,
+        "name" : "Familjerum",
+        "type" : "Familj",
+        "price" : 1300,
+        "details" : "Våra rymliga Familjerum är 21-35 kvm. Här finns en dubbelsäng eller två enkelsängar samt bäddsoffa, arbetsplats och en fåtölj. Våra familjerum har plats för två vuxna och två barn upp till 12 år. Alla rum har strykmöjligheter, tv, minibar, badrum med dusch, hårtork och sminkspegel.",
+        "pictures" : {
+            "picture1" : "rum5_1.jpg",
+            "picture2" : "rum5_2.jpg",
+            "picture3" : "rum5_3.jpg"
+        }
+    }
+]

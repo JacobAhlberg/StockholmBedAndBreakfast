@@ -1,0 +1,40 @@
+<ion-view title="Bekräftelse">
+  <ion-content padding="true" class="has-header">
+
+      <h4>{{confirmation.room}} {{confirmation.price}} SEK per natt</h4>
+
+        <label class="item item-input">
+          <span 
+                class="input-label" 
+                ng-init="formatedDates(confirmation.checkIn, confirmation.checkOut)">
+                <strong>Från:</strong> {{confirmation.checkInDate}}
+                <strong>till:</strong> {{confirmation.checkOutDate}}
+                
+         </span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><strong>Antal nätter:</strong> {{confirmation.days}}</span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><strong>Antal vuxna:</strong> {{confirmation.adults}} <strong>Barn:</strong> {{confirmation.children}}</span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><strong>Namn:</strong> {{confirmation.firstName}} {{confirmation.lastName}}</span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><strong>Email:</strong> {{confirmation.email}}</span>
+        </label>
+        <label class="item item-input">
+          <span class="input-label"><strong>Telefon:</strong> {{confirmation.phoneNmb}}</span>
+        </label>
+        <label class="item item-input">
+          <span  class="input-label" ng-init="cost = totalCost(confirmation)"><strong>Totala kostnaden:</strong> {{cost}}</span>
+        </label>
+
+
+      
+    <a href="#/rooms/rooms" class="button button-calm  button-block">
+        Gå tillbaka till alla rum
+    </a>
+  </ion-content>
+</ion-view>
